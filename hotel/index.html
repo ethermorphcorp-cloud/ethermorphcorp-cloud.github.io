@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d7068">
+<meta name="robots" content="noindex">
+<title>ระบบโรงแรม | Ethermorph</title>
+<!--
+  Opens the hotel Apps Script web app full-screen inside this page, so the address bar keeps this GitHub link.
+  The app allows framing (XFrameOptionsMode.ALLOWALL). Everything after "?" or "#" (?shop=HT001, ?demo=1, &t=…) is
+  passed on, so each shop's link is this page + ?shop=<CUS_ID>. The template's Script Property APP_BASE_URL set to
+  this page makes its own reload / demo / kiosk links come back here instead of to script.google.com.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #0d7068; overflow: hidden; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; height: 100dvh; border: 0; background: #fff; }
+  noscript { color: #fff; font: 16px sans-serif; display: block; padding: 24px; }
+  noscript a { color: #fff; }
+</style>
+</head>
+<body>
+<iframe id="app" title="ระบบโรงแรม | Ethermorph" allow="camera; microphone; clipboard-read; clipboard-write; fullscreen; geolocation" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<noscript>ต้องเปิด JavaScript — <a href="https://script.google.com/macros/s/AKfycbydnWSudHs-34atLkR4bOb2NIe-IoqzoaJbcyrsGrFP7XRWDMswk0-eikiUt4rg29HxqQ/exec">เปิดระบบโดยตรง</a></noscript>
+<script>
+  var EXEC = 'https://script.google.com/macros/s/AKfycbydnWSudHs-34atLkR4bOb2NIe-IoqzoaJbcyrsGrFP7XRWDMswk0-eikiUt4rg29HxqQ/exec';
+  document.getElementById('app').src = EXEC + location.search + location.hash;
+</script>
+</body>
+</html>
